@@ -4,270 +4,294 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Code Jharkhand | Learn Coding for Free</title>
+  <title>Code Jharkhand | Free Coding Courses</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+  <meta name="description"
+    content="Code Jharkhand par Hindi mein HTML, CSS aur JavaScript free mein seekhein.">
 
-    body {
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    header h1 {
-      font-size: 38px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #ddd;
-    }
-
-    nav {
-      background: #292929;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 8px 12px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      color: #00d4ff;
-    }
-
-    .hero {
-      background: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 18px;
-      color: #555;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #007bff;
-      color: white;
-      padding: 14px 25px;
-      margin-top: 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #0056b3;
-    }
-
-    .courses {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    .courses h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 30px;
-    }
-
-    .course-container {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .course {
-      background: white;
-      width: 280px;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-    }
-
-    .course h3 {
-      font-size: 25px;
-      margin-bottom: 12px;
-    }
-
-    .course p {
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .course a {
-      display: inline-block;
-      background: #222;
-      color: white;
-      padding: 10px 18px;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    .course a:hover {
-      background: #007bff;
-    }
-
-    .about {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .about h2 {
-      margin-bottom: 15px;
-      font-size: 28px;
-    }
-
-    .about p {
-      max-width: 700px;
-      margin: auto;
-      color: #ddd;
-      font-size: 17px;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
-      }
-
-      .hero h2 {
-        font-size: 26px;
-      }
-
-      nav a {
-        margin: 5px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>💻 Code Jharkhand</h1>
-    <p>Learn Coding for Free 🚀</p>
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>Code Jharkhand</h1>
+    <p>HTML, CSS aur JavaScript Hindi mein seekhein 🚀</p>
   </header>
 
+  <!-- NAVBAR -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="html.html">HTML</a>
-    <a href="css.html">CSS</a>
-    <a href="javascript.html">JavaScript</a>
+    <a href="#home">Home</a>
+    <a href="#html">HTML</a>
+    <a href="#css">CSS</a>
+    <a href="#javascript">JavaScript</a>
+    <a href="#practice">Practice</a>
   </nav>
 
-  <section class="hero">
+  <main>
 
-    <h2>सीखो Coding बिल्कुल Free! 🚀</h2>
+    <!-- HOME -->
+    <section id="home" class="card">
+      <span class="tag">FREE CODING COURSE</span>
 
-    <p>
-      Code Jharkhand पर HTML, CSS और JavaScript सीखें
-      और अपनी खुद की Website बनाना शुरू करें।
-    </p>
+      <h2>Zero se Coding seekhna shuru karein 💻</h2>
 
-    <a href="#courses" class="btn">Start Learning</a>
-
-  </section>
-
-
-  <section class="courses" id="courses">
-
-    <h2>हमारे Courses 📚</h2>
-
-    <div class="course-container">
-
-      <div class="course">
-        <h3>🌐 HTML</h3>
-
-        <p>
-          HTML सीखकर Website की Structure बनाना सीखें।
-        </p>
-
-        <a href="html.html">Learn HTML</a>
-      </div>
+      <p>
+        Simple Hindi explanation, examples aur practice ke saath
+        Web Development seekhein.
+      </p>
+    </section>
 
 
-      <div class="course">
-        <h3>🎨 CSS</h3>
+    <!-- HTML -->
+    <section id="html" class="card">
+
+      <h2>🟠 HTML Course</h2>
+
+      <p>
+        HTML website ka structure banane ke liye use hota hai.
+      </p>
+
+      <article class="lesson">
+
+        <h3>Lesson 1: HTML kya hai?</h3>
 
         <p>
-          CSS से अपनी Website को सुंदर और आकर्षक बनाएं।
+          HTML ka full form
+          <b>HyperText Markup Language</b> hai.
         </p>
 
-        <a href="css.html">Learn CSS</a>
-      </div>
+        <pre><code>&lt;h1&gt;Hello Jharkhand!&lt;/h1&gt;
+&lt;p&gt;Meri first website&lt;/p&gt;</code></pre>
+
+        <div class="output">
+          <b>Output:</b>
+
+          <h1>Hello Jharkhand!</h1>
+
+          <p>Meri first website</p>
+        </div>
+
+      </article>
 
 
-      <div class="course">
-        <h3>⚡ JavaScript</h3>
+      <article class="lesson">
+
+        <h3>Lesson 2: HTML Link</h3>
 
         <p>
-          JavaScript से अपनी Website को Interactive बनाएं।
+          Link banane ke liye
+          <code>&lt;a&gt;</code> tag use hota hai.
         </p>
 
-        <a href="javascript.html">Learn JavaScript</a>
+        <pre><code>&lt;a href="https://example.com"&gt;
+Visit Website
+&lt;/a&gt;</code></pre>
+
+      </article>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 3: HTML Form</h3>
+
+        <p>
+          Form se user se information li ja sakti hai.
+        </p>
+
+        <pre><code>&lt;form&gt;
+
+&lt;input type="text"
+placeholder="Your Name"&gt;
+
+&lt;button&gt;Submit&lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+      </article>
+
+    </section>
+
+
+    <!-- CSS -->
+    <section id="css" class="card">
+
+      <h2>🔵 CSS Course</h2>
+
+      <p>
+        CSS website ko beautiful aur responsive banane ke liye use hota hai.
+      </p>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 1: CSS Color</h3>
+
+        <pre><code>h1 {
+  color: orange;
+  font-size: 32px;
+}</code></pre>
+
+        <p class="demo-text">
+          CSS se text ka design change kar sakte hain.
+        </p>
+
+      </article>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 2: CSS Box Model</h3>
+
+        <p>
+          Box Model mein Content, Padding, Border aur Margin hote hain.
+        </p>
+
+        <div class="box">
+          CSS Box Model
+        </div>
+
+      </article>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 3: Flexbox</h3>
+
+        <pre><code>.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}</code></pre>
+
+      </article>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <section id="javascript" class="card">
+
+      <h2>🟡 JavaScript Course</h2>
+
+      <p>
+        JavaScript website ko interactive banata hai.
+      </p>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 1: Variable</h3>
+
+        <pre><code>let name = "Sachin";
+let age = 18;
+
+console.log(name);
+console.log(age);</code></pre>
+
+        <p>
+          Variable ke andar hum data store kar sakte hain.
+        </p>
+
+      </article>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 2: Button Click</h3>
+
+        <p>
+          Button par click karke JavaScript ka example dekho:
+        </p>
+
+        <button onclick="showMessage()">
+          Click Me
+        </button>
+
+        <p id="message"></p>
+
+      </article>
+
+
+      <article class="lesson">
+
+        <h3>Lesson 3: Function</h3>
+
+        <pre><code>function greet() {
+  alert("Hello!");
+}
+
+greet();</code></pre>
+
+        <p>
+          Function reusable code ka block hota hai.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <!-- PRACTICE -->
+    <section id="practice" class="card">
+
+      <h2>📝 Practice Zone</h2>
+
+      <p>Ab khud answer dene ki koshish karo:</p>
+
+      <div class="question">
+        <b>1.</b> HTML ka full form kya hai?
       </div>
 
-    </div>
+      <div class="question">
+        <b>2.</b> CSS ka use kisliye hota hai?
+      </div>
 
-  </section>
+      <div class="question">
+        <b>3.</b> JavaScript website mein kya karta hai?
+      </div>
 
+      <div class="question">
+        <b>4.</b> CSS mein Flexbox ki property ka naam batao.
+      </div>
 
-  <section class="about">
-
-    <h2>About Code Jharkhand</h2>
-
-    <p>
-      हमारा उद्देश्य है कि हर कोई आसानी से और बिल्कुल Free में
-      Coding सीख सके। यहाँ आप step-by-step Web Development सीख सकते हैं।
-    </p>
-
-  </section>
+    </section>
 
 
+    <!-- PROJECT -->
+    <section class="card">
+
+      <h2>🚀 Mini Project Ideas</h2>
+
+      <ul>
+        <li>Personal Portfolio Website</li>
+        <li>Digital Clock</li>
+        <li>Calculator</li>
+        <li>To-Do List</li>
+        <li>Quiz Website</li>
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Code Jharkhand | Learn Coding for Free 💻</p>
+
+    <p>
+      © 2026 Code Jharkhand
+    </p>
+
+    <p>
+      Learn Coding Free 🚀
+    </p>
+
   </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
