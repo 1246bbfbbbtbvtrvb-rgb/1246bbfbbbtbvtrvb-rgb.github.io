@@ -426,3 +426,30 @@ footer p:first-child {
   }
 
   }
+/* Dark Mode Button */
+.dark-btn {
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 15px;
+  font-size: 16px;
+}
+
+/* Dark Mode Design */
+body.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+body.dark-mode .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode p,
+body.dark-mode li {
+  color: #eeeeee;
+}
