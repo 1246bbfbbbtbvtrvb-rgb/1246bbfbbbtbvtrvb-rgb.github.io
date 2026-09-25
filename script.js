@@ -3,140 +3,49 @@ function showMessage() {
     "🎉 Great! JavaScript ka button kaam kar raha hai.";
 }
 
+// Quiz Score System
+let score = 0;
+let answered = 0;
+const totalQuestions = 4;
 
-// Practice Quiz + Score System
+function checkAnswer(button, correct) {
+  const question = button.closest(".quiz-question");
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Ek question ka answer dobara select na ho
+  if (!question || question.dataset.done === "true") {
+    return;
+  }
 
-  const questions = document.querySelectorAll(".question");
+  question.dataset.done = "true";
+  answered++;
 
-  const quizData = [
-    {
-      options: [
-        "HyperText Markup Language",
-        "HighText Machine Language",
-        "Hyper Tool Markup Language"
-      ],
-      answer: 0
-    },
-    {
-      options: [
-        "Website ka design banane ke liye",
-        "Database banane ke liye",
-        "Internet chalane ke liye"
-      ],
-      answer: 0
-    },
-    {
-      options: [
-        "Website ko interactive banata hai",
-        "Sirf image banata hai",
-        "Sirf text likhta hai"
-      ],
-      answer: 0
-    },
-    {
-      options: [
-        "display: flex",
-        "text: bold",
-        "color: red"
-      ],
-      answer: 0
-    }
-  ];
+  const buttons = question.querySelectorAll("button");
 
-  let score = 0;
-  let answered = 0;
-
-  // Score display
-  const scoreBox = document.createElement("div");
-
-  scoreBox.style.background = "#fff3bd";
-  scoreBox.style.padding = "20px";
-  scoreBox.style.margin = "20px 0";
-  scoreBox.style.borderRadius = "10px";
-  scoreBox.style.fontWeight = "bold";
-  scoreBox.innerText = "🏆 Score: 0 / " + quizData.length;
-
-  const practiceSection = document.getElementById("practice");
-
-  practiceSection.insertBefore(
-    scoreBox,
-    practiceSection.children[2]
-  );
-
-
-  questions.forEach(function (question, index) {
-
-    if (!quizData[index]) return;
-
-    const optionsBox = document.createElement("div");
-
-    let selected = false;
-
-    quizData[index].options.forEach(function (option, optionIndex) {
-
-      const button = document.createElement("button");
-
-      button.innerText = option;
-      button.style.margin = "5px";
-
-      button.addEventListener("click", function () {
-
-        if (selected) return;
-
-        selected = true;
-        answered++;
-
-        const allButtons = optionsBox.querySelectorAll("button");
-
-        allButtons.forEach(function (btn) {
-          btn.disabled = true;
-        });
-
-        if (optionIndex === quizData[index].answer) {
-
-          score++;
-
-          button.innerText = "✅ " + option;
-          question.style.border = "2px solid green";
-
-        } else {
-
-          button.innerText = "❌ " + option;
-          question.style.border = "2px solid red";
-
-          allButtons[quizData[index].answer].innerText =
-            "✅ " + quizData[index].options[quizData[index].answer];
-
-        }
-
-        scoreBox.innerText =
-          "🏆 Score: " + score + " / " + quizData.length;
-
-        if (answered === quizData.length) {
-
-          const result = document.createElement("p");
-
-          result.innerText =
-            "🎉 Quiz Complete! Your Score: " +
-            score + " / " + quizData.length;
-
-          result.style.fontWeight = "bold";
-          result.style.color = "green";
-
-          practiceSection.appendChild(result);
-
-        }
-
-      });
-
-      optionsBox.appendChild(button);
-
-    });
-
-    question.appendChild(optionsBox);
-
+  // Sabhi buttons disable karo
+  buttons.forEach(function (btn) {
+    btn.disabled = true;
   });
 
-});
+  if (correct) {
+    score++;
+    button.innerText = "✅ " + button.innerText;
+    question.style.border = "2px solid green";
+  } else {
+    button.innerText = "❌ " + button.innerText;
+    question.style.border = "2px solid red";
+  }
+}
+
+// Score show karna
+function showScore() {
+  const scoreBox = document.getElementById("score");
+
+  if (answered < totalQuestions) {
+    scoreBox.innerText =
+      "⚠️ Pehle sabhi 4 questions ka answer do.";
+    return;
+  }
+
+  scoreBox.innerText =
+    "🎉 Your Score: " + score + " / " + totalQuestions;
+}
