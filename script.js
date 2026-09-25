@@ -61,3 +61,35 @@ function toggleDarkMode() {
     button.innerText = "🌙 Dark Mode";
   }
 }
+
+function searchLesson() {
+  const input = document.getElementById("searchInput");
+  const result = document.getElementById("searchResult");
+
+  const searchText = input.value.toLowerCase().trim();
+  const cards = document.querySelectorAll("main .card");
+
+  let found = 0;
+
+  cards.forEach(function (card) {
+    const content = card.innerText.toLowerCase();
+
+    if (content.includes(searchText)) {
+      card.style.display = "block";
+      found++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  if (searchText === "") {
+    cards.forEach(function (card) {
+      card.style.display = "block";
+    });
+
+    result.innerText = "";
+    return;
+  }
+
+  result.innerText = "🔍 " + found + " lesson found";
+}
