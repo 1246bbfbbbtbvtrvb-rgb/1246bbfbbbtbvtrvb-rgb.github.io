@@ -49,3 +49,15 @@ function showScore() {
   scoreBox.innerText =
     "🎉 Your Score: " + score + " / " + totalQuestions;
 }
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+
+  const button = document.querySelector(".dark-btn");
+
+  if (document.body.classList.contains("dark-mode")) {
+    button.innerText = "☀️ Light Mode";
+  } else {
+    button.innerText = "🌙 Dark Mode";
+  }
+}
