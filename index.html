@@ -234,31 +234,87 @@ greet();</code></pre>
     </section>
 
 
-    <!-- PRACTICE -->
-    <section id="practice" class="card">
+    
 
-      <h2>📝 Practice Zone</h2>
+<!-- PRACTICE -->
+<section id="practice" class="card">
 
-      <p>Ab khud answer dene ki koshish karo:</p>
+  <h2>📝 Practice Quiz</h2>
 
-      <div class="question">
-        <b>1.</b> HTML ka full form kya hai?
-      </div>
+  <p>Apna answer select karo:</p>
 
-      <div class="question">
-        <b>2.</b> CSS ka use kisliye hota hai?
-      </div>
+  <div class="quiz-question">
+    <h3>1. HTML ka full form kya hai?</h3>
 
-      <div class="question">
-        <b>3.</b> JavaScript website mein kya karta hai?
-      </div>
+    <button onclick="checkAnswer(this, true)">
+      HyperText Markup Language
+    </button>
 
-      <div class="question">
-        <b>4.</b> CSS mein Flexbox ki property ka naam batao.
-      </div>
+    <button onclick="checkAnswer(this, false)">
+      HighText Machine Language
+    </button>
 
-    </section>
+    <button onclick="checkAnswer(this, false)">
+      Hyper Tool Markup Language
+    </button>
+  </div>
 
+  <div class="quiz-question">
+    <h3>2. CSS ka use kisliye hota hai?</h3>
+
+    <button onclick="checkAnswer(this, true)">
+      Website ka design banane ke liye
+    </button>
+
+    <button onclick="checkAnswer(this, false)">
+      Database banane ke liye
+    </button>
+
+    <button onclick="checkAnswer(this, false)">
+      Internet chalane ke liye
+    </button>
+  </div>
+
+  <div class="quiz-question">
+    <h3>3. JavaScript website mein kya karta hai?</h3>
+
+    <button onclick="checkAnswer(this, true)">
+      Website ko interactive banata hai
+    </button>
+
+    <button onclick="checkAnswer(this, false)">
+      Sirf image banata hai
+    </button>
+
+    <button onclick="checkAnswer(this, false)">
+      Sirf text likhta hai
+    </button>
+  </div>
+
+  <div class="quiz-question">
+    <h3>4. CSS mein Flexbox ki property ka naam batao.</h3>
+
+    <button onclick="checkAnswer(this, true)">
+      display: flex
+    </button>
+
+    <button onclick="checkAnswer(this, false)">
+      text: bold
+    </button>
+
+    <button onclick="checkAnswer(this, false)">
+      color: red
+    </button>
+  </div>
+
+  <button onclick="showScore()" class="submit-btn">
+    ✅ Submit Quiz
+  </button>
+
+  <h3 id="score"></h3>
+
+</section>
+    
 
     <!-- PROJECT -->
     <section class="card">
