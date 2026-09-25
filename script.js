@@ -4,7 +4,7 @@ function showMessage() {
 }
 
 
-// Practice Quiz
+// Practice Quiz + Score System
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -46,12 +46,33 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   let score = 0;
+  let answered = 0;
+
+  // Score display
+  const scoreBox = document.createElement("div");
+
+  scoreBox.style.background = "#fff3bd";
+  scoreBox.style.padding = "20px";
+  scoreBox.style.margin = "20px 0";
+  scoreBox.style.borderRadius = "10px";
+  scoreBox.style.fontWeight = "bold";
+  scoreBox.innerText = "🏆 Score: 0 / " + quizData.length;
+
+  const practiceSection = document.getElementById("practice");
+
+  practiceSection.insertBefore(
+    scoreBox,
+    practiceSection.children[2]
+  );
+
 
   questions.forEach(function (question, index) {
 
     if (!quizData[index]) return;
 
     const optionsBox = document.createElement("div");
+
+    let selected = false;
 
     quizData[index].options.forEach(function (option, optionIndex) {
 
@@ -62,13 +83,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
       button.addEventListener("click", function () {
 
+        if (selected) return;
+
+        selected = true;
+        answered++;
+
+        const allButtons = optionsBox.querySelectorAll("button");
+
+        allButtons.forEach(function (btn) {
+          btn.disabled = true;
+        });
+
         if (optionIndex === quizData[index].answer) {
+
           score++;
-          question.style.border = "2px solid green";
+
           button.innerText = "✅ " + option;
+          question.style.border = "2px solid green";
+
         } else {
-          question.style.border = "2px solid red";
+
           button.innerText = "❌ " + option;
+          question.style.border = "2px solid red";
+
+          allButtons[quizData[index].answer].innerText =
+            "✅ " + quizData[index].options[quizData[index].answer];
+
+        }
+
+        scoreBox.innerText =
+          "🏆 Score: " + score + " / " + quizData.length;
+
+        if (answered === quizData.length) {
+
+          const result = document.createElement("p");
+
+          result.innerText =
+            "🎉 Quiz Complete! Your Score: " +
+            score + " / " + quizData.length;
+
+          result.style.fontWeight = "bold";
+          result.style.color = "green";
+
+          practiceSection.appendChild(result);
+
         }
 
       });
